@@ -1,0 +1,25 @@
+extends ../layouts/default
+
+mixin player(player)
+	.player(data-ks-editable=editable(user, { list: 'User', id: user}))
+		if player.team=='BIG'
+			h2= player.name.first+' '+player.name.last
+			if player.status != 'active'
+				h2(style={color:'yellow'}) Alumni
+			p.lead.text-muted=player.chineseName 
+			if player.image.exists
+				img(src=player._.image.fit(160,160)).img.pull-right
+			if player.bio
+				p=player.bio
+
+block intro
+	.container
+		h1 BIG Players/   BIG演员
+
+block content
+	.container: .row
+		.col-sm-8.col-md-9
+			if data.players
+				.blog
+					each player in data.players
+						+player(player)
