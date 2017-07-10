@@ -20,11 +20,12 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'What\'s New', key: 'blog', href: '/blog' },
+		{ label: 'What\'s New 消息', key: 'blog', href: '/blog' },
 		{ label: 'English Players', key: 'english', href: '/english_players' },
-		{ label: 'BIG', key: 'big', href: '/big_players' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
+		{ label: 'BIG Players', key: 'big', href: '/big_players' },
+		{ label: 'Workshop 工作坊', key: 'workshop', href:'/workshop' },
+		{ label: 'Gallery 图库', key: 'gallery', href: '/gallery' },
+		{ label: 'Contact 联系', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;
 	next();

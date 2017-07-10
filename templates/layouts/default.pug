@@ -57,7 +57,7 @@ html
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 						ul.nav.navbar-nav.navbar-right
 							if user
-								li: a(href='/workshop_schedule') Workshop Schedule 工作坊安排
+								li: a(href='/constitution') BJI Constitution北京即兴章程
 								if user.canAccessKeystone
 									li: a(href='/keystone') Open Admin Panel 打开管理员中心
 								li: a(href='/keystone/signout') Sign Out 注销
